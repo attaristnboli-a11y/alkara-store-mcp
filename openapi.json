@@ -1,0 +1,124 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "AL-KARA Store Agent API & Stateless MCP",
+    "version": "1.0.0",
+    "description": "Read-only product catalog, GCC shipping verification, and Model Context Protocol (MCP) server for AL-KARA (alkaratr.com)."
+  },
+  "servers": [
+    {
+      "url": "https://agent.alkaratr.com"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Service health & endpoint directory",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/store": {
+      "get": {
+        "summary": "Canonical AL-KARA store policies & legal identity",
+        "responses": {
+          "200": {
+            "description": "Store metadata JSON"
+          }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "summary": "Search & filter AL-KARA products",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "brand",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "gulf",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "in_stock",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "max_price",
+            "in": "query",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "default": 10,
+              "maximum": 64
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Matched products list"
+          }
+        }
+      }
+    },
+    "/api/products/{identifier}": {
+      "get": {
+        "summary": "Get single product by ID, SKU, GTIN, or slug",
+        "parameters": [
+          {
+            "name": "identifier",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product details"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
+    "/mcp": {
+      "post": {
+        "summary": "Stateless MCP JSON-RPC 2.0 endpoint",
+        "responses": {
+          "200": {
+            "description": "JSON-RPC response"
+          }
+        }
+      }
+    }
+  }
+}

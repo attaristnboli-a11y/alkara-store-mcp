@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.alkaratr/store-mcp",
+  "title": "AL-KARA Cosmetics & GCC Store MCP Server",
+  "description": "Public read-only Streamable HTTP MCP server for AL-KARA (alkaratr.com): search 64+ ÜTS barcode-verified cosmetics in Turkish & Arabic, check live TRY prices, and verify GCC air-cargo shipping eligibility.",
+  "repository": {
+    "url": "https://github.com/attaristnboli-a11y/alkara-store-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://alkaratr.com/",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://agent.alkaratr.com/mcp"
+    }
+  ]
+}
