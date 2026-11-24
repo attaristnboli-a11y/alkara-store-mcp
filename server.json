@@ -7,8 +7,25 @@
     "url": "https://github.com/attaristnboli-a11y/alkara-store-mcp",
     "source": "github"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://alkaratr.com/",
+  "icons": [
+    {
+      "src": "https://alkaratr.com/wp-content/uploads/2026/09/alkara-icon-192.png",
+      "mimeType": "image/png",
+      "sizes": ["192x192"]
+    },
+    {
+      "src": "https://alkaratr.com/wp-content/uploads/2026/09/alkara-icon-144.png",
+      "mimeType": "image/png",
+      "sizes": ["144x144"]
+    },
+    {
+      "src": "https://alkaratr.com/wp-content/uploads/2026/09/alkara-icon-96.png",
+      "mimeType": "image/png",
+      "sizes": ["96x96"]
+    }
+  ],
   "remotes": [
     {
       "type": "streamable-http",
