@@ -1,5 +1,7 @@
 # AL-KARA Cosmetics & GCC Store MCP Server
 
+[![mcptry](https://mcptry.com/badge/com.alkaratr/store-mcp)](https://mcptry.com/servers/com.alkaratr/store-mcp)
+
 [![Transport](https://img.shields.io/badge/MCP-Streamable%20HTTP-blue)](https://agent.alkaratr.com/mcp)
 [![Auth](https://img.shields.io/badge/Authentication-None%20(Read--Only)-brightgreen)](https://alkaratr.com/.well-known/mcp/server-card.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
